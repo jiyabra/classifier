@@ -26,7 +26,7 @@ function gotResult(error , results){
       previous_result = results[0].label;
       var synth = window.speechSynthesis;
       speak_data = 'object detected is -' + results[0].label;
-      var utterThis = new SpeechSynthesisUtterance[speak_data];
+      var utterThis = new SpeechSynthesisUtterance(speak_data);
       synth.speak(utterThis);
 
       document.getElementById("result_object_name").innerHTML = results[0].label;
